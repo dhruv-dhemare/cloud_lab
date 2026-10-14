@@ -2,12 +2,6 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './styles.css';
 
-const pillars = [
-  { number: '01', title: 'Store', text: 'Keep data available, secure and ready to grow.' },
-  { number: '02', title: 'Scale', text: 'Use exactly the resources your idea needs.' },
-  { number: '03', title: 'Connect', text: 'Build services that work together from anywhere.' },
-];
-
 function CloudMark() {
   return (
     <svg className="cloud-mark" viewBox="0 0 80 52" aria-hidden="true">
@@ -35,7 +29,11 @@ function App() {
             A sample site for exploring cloud computing — the way modern applications
             store, scale and connect without being tied to one machine.
           </p>
-          <a className="button" href="#learn">Explore the basics <span>↗</span></a>
+          <div className="student-card">
+            <span>student project</span>
+            <strong>Dhruv Dhemare</strong>
+            <small>Roll no. 42127</small>
+          </div>
         </div>
         <div className="hero-art" aria-label="Abstract cloud illustration">
           <div className="art-glow" />
@@ -49,27 +47,6 @@ function App() {
           <span className="art-label label-bottom">anywhere</span>
         </div>
       </section>
-
-      <section className="learn shell" id="learn">
-        <div className="section-heading">
-          <p className="eyebrow">The simple version</p>
-          <h2>Cloud, in three<br /><em>quiet moves.</em></h2>
-        </div>
-        <div className="pillars">
-          {pillars.map((pillar) => (
-            <article className="pillar" key={pillar.number}>
-              <span className="pillar-number">{pillar.number}</span>
-              <h3>{pillar.title}</h3>
-              <p>{pillar.text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <footer className="footer shell">
-        <div><span className="brand-dot" /> made for Cloud Lab</div>
-        <div className="student">Dhruv Dhemare <span>·</span> Roll no. 42127</div>
-      </footer>
     </main>
   );
 }
